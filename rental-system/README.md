@@ -58,3 +58,7 @@
 
 ## Σημειώσεις
 Το Frontend δεν μιλάει απευθείας με τη βάση· όλες οι λειτουργίες γίνονται μέσω REST API.
+
+Το project βρίσκεται στον φάκελο /rental-system του repository. 
+Μετά το clone: cd rental-system && mvn clean spring-boot:run
+
