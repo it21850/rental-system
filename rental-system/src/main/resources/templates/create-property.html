@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Property</title>
+</head>
+<body>
+<h1 style="text-align: center;">Create New Property</h1>
+
+<form th:action="@{/properties}" th:object="${property}" method="post" style="width: 300px; margin: auto;">
+    <label>Title:</label><br/>
+    <input type="text" th:field="*{title}" /><br/><br/>
+
+    <label>Description:</label><br/>
+    <input type="text" th:field="*{description}" /><br/><br/>
+
+    <label>Price:</label><br/>
+    <input type="number" step="0.01" th:field="*{price}" /><br/><br/>
+
+    <label>Available:</label>
+    <input type="checkbox" th:field="*{available}" /><br/><br/>
+
+    <button type="submit">Save</button>
+</form>
+
+<div style="text-align: center; margin-top: 20px;">
+    <a href="/properties">⬅ Back to list</a>
+</div>
+</body>
+</html>

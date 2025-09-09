@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="el" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ακίνητα</title>
+    <style>
+        body { font-family: system-ui, Arial; margin: 24px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; }
+        thead { background: #f3f3f3; }
+        .toolbar { margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+<h1>Ακίνητα</h1>
+<div class="toolbar">
+    <button id="btn-all">Όλα</button>
+    <button id="btn-available">Μόνο διαθέσιμα</button>
+    <a href="/ui/properties/new">+ Νέο ακίνητο</a>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Τίτλος</th>
+        <th>Περιγραφή</th>
+        <th>Τιμή</th>
+        <th>Διαθέσιμο</th>
+        <th>Ενέργειες</th>
+    </tr>
+    </thead>
+    <tbody id="props-body">
+    <!-- Γεμίζει δυναμικά από JS με fetch στο REST API -->
+    </tbody>
+</table>
+
+<script src="/js/properties.js"></script>
+</body>
+</html>

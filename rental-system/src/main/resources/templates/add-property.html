@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Property</title>
+    <style>
+        form { width: 300px; margin: 50px auto; }
+        label { display: block; margin-top: 10px; }
+        input, textarea { width: 100%; padding: 5px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 8px 12px; }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Add New Property</h1>
+
+<form th:action="@{/properties}" th:object="${property}" method="post">
+    <label>Title:</label>
+    <input type="text" th:field="*{title}" required/>
+
+    <label>Description:</label>
+    <textarea th:field="*{description}" required></textarea>
+
+    <label>Price:</label>
+    <input type="number" step="0.01" th:field="*{price}" required/>
+
+    <label>Available:</label>
+    <input type="checkbox" th:field="*{available}"/>
+
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>
